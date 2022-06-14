@@ -20,3 +20,7 @@
 - classe abstrata tem um método que invoca métodos abstratos das classes filhas
 - os métodos abstratos invocados implementam regras específicas das classes filhas
 
+### State
+- regra para transição de estados
+- parecido com strategy: reduzir quantidade de if
+- cada status é uma classe concreta diferente que sobreescreve o método caso necessário ou lança exception
