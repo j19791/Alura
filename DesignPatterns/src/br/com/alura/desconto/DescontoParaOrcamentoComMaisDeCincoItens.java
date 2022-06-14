@@ -11,15 +11,16 @@ public DescontoParaOrcamentoComMaisDeCincoItens(Desconto proximo) {
 		// TODO Auto-generated constructor stub
 	}
 
-public BigDecimal calcular(Orcamento orcamento) {
-		
+public BigDecimal efetuarCalculo(Orcamento orcamento) {
 
-		if(orcamento.getQuantidadeDeItens() > 5) {
 			return orcamento.getValor().multiply(new BigDecimal("0.1"));	
-		}
-		
-		//nao aplicou o desconto, chama o próximo tipo de desconto
-		return proximo.calcular(orcamento);
+
+}
+
+@Override
+public boolean deveAplicar(Orcamento orcamento) {
+	// TODO Auto-generated method stub
+	return orcamento.getQuantidadeDeItens() > 5;
 }
 	
 	

@@ -15,3 +15,8 @@
 - não sei de cara o tipo de critério que vai ser aplicado, obrigando eu chamar cada um dos critérios (o próximo) até o teste ok.
 - final da cadeia: quando não acha nenhum critério
 - escalar as regras.
+
+### Template Method
+- classe abstrata tem um método que invoca métodos abstratos das classes filhas
+- os métodos abstratos invocados implementam regras específicas das classes filhas
+
