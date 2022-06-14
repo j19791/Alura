@@ -7,4 +7,8 @@
 ### Strategy
 
 - regra que varia com determinado padrão: muitos if/else/switch
-- Classe que usa interface/ Classe abstrata que implementa sua própria característica.
+- Classe que usa interface/ Classe abstrata que implementa seu prórpio algoritmo.
+
+### Chain of Responsability
+
+- - regra que varia com determinado padrão: muitos if/else/switch
