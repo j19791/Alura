@@ -6,3 +6,5 @@
 
 ### Strategy
 
+- regra que varia com determinado padrão: muitos if/else/switch
+- Classe que usa interface/ Classe abstrata que implementa sua própria característica.
