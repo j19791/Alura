@@ -24,3 +24,12 @@
 - regra para transição de estados
 - parecido com strategy: reduzir quantidade de if
 - cada status é uma classe concreta diferente que sobreescreve o método caso necessário ou lança exception
+
+### Command
+- Que um caso de uso em nossa aplicação pode ter várias ações (salvar no banco, enviar e-mail, etc);
+- Que um caso de uso deve ser extraído para uma classe específica, ao invés de estar no arquivo da CLI, controller ou algo do tipo;
+
+#### Command Handler
+- domain driven designer
+- uma classe para os dados
+- uma classe para execução
