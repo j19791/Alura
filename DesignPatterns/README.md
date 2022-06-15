@@ -42,4 +42,6 @@
 - classes observadores esperam para serem chamadas
 
 ### Adapters
-- 
+- criar código independente da implementação
+- criar uma interface abstrata (Adaptador)  
+- quem implementa essa interface pode ser usado nesse código. Possibilita rápida troca da implementação
