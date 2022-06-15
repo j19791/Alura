@@ -34,3 +34,7 @@
 - domain driven designer
 - uma classe para os dados
 - uma classe para execução
+
+### Observer
+- perda de coesao: muitas responsabilidades: ruim de manutenção
+- classe continua crescendo com as ações, mesmo isolando elas em classes
