@@ -2,9 +2,10 @@ package br.com.alura.loja.pedido.acao;
 
 import br.com.alura.loja.pedido.Pedido;
 
-public class SalvarPedidoNoBancoDeDados {
+//Observador 
+public class SalvarPedidoNoBancoDeDados implements AcaoAposGerarPedido{
 
-	public void executar(Pedido pedido) {
+	public void executarAcao(Pedido pedido) {
 		System.out.println("Salvar pedido do bd");
 		
 	}

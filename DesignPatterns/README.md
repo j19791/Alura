@@ -38,3 +38,5 @@
 ### Observer
 - perda de coesao: muitas responsabilidades: ruim de manutenção
 - classe continua crescendo com as ações, mesmo isolando elas em classes
+- inversão de controle: injeção de dependencias
+- classes observadores esperam para serem chamadas
