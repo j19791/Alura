@@ -26,4 +26,16 @@ Orcamento orcamento = new Orcamento(this.valorOrcamento, this.quantidadeDeItens)
 		System.out.println("Enviar email com dados do novo pedido");
 		
 	}
+
+	public String getCliente() {
+		return cliente;
+	}
+
+	public BigDecimal getValorOrcamento() {
+		return valorOrcamento;
+	}
+
+	public int getQuantidadeDeItens() {
+		return quantidadeDeItens;
+	}
 }
