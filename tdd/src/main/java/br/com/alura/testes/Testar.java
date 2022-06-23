@@ -1,0 +1,10 @@
+package br.com.alura.testes;
+
+public class Testar {
+
+	public static void main(String[] args) {
+		System.out.println("teste");
+
+	}
+
+}
