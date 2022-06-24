@@ -14,16 +14,10 @@ Se o desempenho for "Ótimo", o reajuste será de 20% do salário.*/
 public class ReajusteService {
 
 	public void concederReajuste(Funcionario f, Desempenho d) {
-		
-		BigDecimal reajuste = BigDecimal.ZERO;
-		
-		switch(d) {
-		case A_DESEJAR : reajuste = f.getSalario().multiply(new BigDecimal("0.03")); break;
-		case BOM:  reajuste = f.getSalario().multiply(new BigDecimal("0.15")); break;
-		case OTIMO: reajuste = f.getSalario().multiply(new BigDecimal("0.20"));
-		}
-		
 			
+		//		Refactoring: utilizar o padrão strategy
+		BigDecimal reajuste = f.getSalario().multiply(d.percentualReajuste());
+					
 		f.reajustarSalario(reajuste);
 		
 	}

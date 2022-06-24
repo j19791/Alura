@@ -40,6 +40,12 @@
 - comportamento mais importante que implementação
 - padrão anterior: código antes, testes depois
 - TDD: testes antes, código depois
-- o teste vai guiando o desenvolvimento
+- o teste vai guiando o desenvolvimento (rascunho)
 - testes -> implementação -> refatoração -> testes ....
-
+- refatoração: melhorada no código sem alterar o comportamento: padrão de prejeto, polimorfismo
+- vantagens: 
+	- código ja sai testado
+	- evita testes viciados na implementação 
+	- refatoração faz parte do processo
+	- ajuda a manter o foco
+	- temos uma tendencia em escrever um código mais simples
