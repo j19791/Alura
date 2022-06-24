@@ -34,6 +34,7 @@
 - *Assert*
 	- Equals(valor esperado, valor que devo verificar); 	
 		- `assertEquals(BigDecimal.ZERO, bonus);`
+- fail("Força o JUNIT p/ falhar o teste")
 		
 ### TDD
 - nova abordagem de desenvolvimento com testes automatizados
@@ -49,3 +50,6 @@
 	- refatoração faz parte do processo
 	- ajuda a manter o foco
 	- temos uma tendencia em escrever um código mais simples
+
+### Exceptions
+- assertThrows
