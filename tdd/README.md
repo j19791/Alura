@@ -34,3 +34,12 @@
 - *Assert*
 	- Equals(valor esperado, valor que devo verificar); 	
 		- `assertEquals(BigDecimal.ZERO, bonus);`
+		
+### TDD
+- nova abordagem de desenvolvimento com testes automatizados
+- comportamento mais importante que implementação
+- padrão anterior: código antes, testes depois
+- TDD: testes antes, código depois
+- o teste vai guiando o desenvolvimento
+- testes -> implementação -> refatoração -> testes ....
+
