@@ -7,9 +7,13 @@
 - influencia na melhoria do código (refactoring)
 - diminui as falhas de programação e teste manual devido ao fator humano
 
+
 ### Testes Automatizados
 - código que testa código
 - rastreamento mais eficaz
+- o que testar ?
+	- não testar classes Bean: getters/ setters, construtores
+	- testar apenas classes que implementam regras de negócios, validações e com muitas mudanças 
 
 ### JUNit
 - biblioteca padrão para escrita de testes automatizados
@@ -53,3 +57,4 @@
 
 ### Exceptions
 - assertThrows
+
