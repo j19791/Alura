@@ -17,5 +17,15 @@ public class Teste {
 			System.out.println("Nenhum nome encontrado!!");
 		}
 		}
+		
+		//Java 14 - Switch expressions c/ lambda
+		switch (nome) {
+		case "Renata" ->	System.out.println("Acertou: " + nome);		
+		case "João" -> 	System.out.println("Acertou: " + nome);		
+		default -> 	System.out.println("Nenhum nome encontrado!!");
+		}
+		
+		
+		
 	}
 }
