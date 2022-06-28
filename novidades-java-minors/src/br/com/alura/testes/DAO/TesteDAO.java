@@ -12,8 +12,10 @@ public class TesteDAO {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
 
-		new PlanetaDAO().listar();
-
+		
+		
+		new PlanetaDAO().listar(); //lentidão - não precisa bloquear a aplicaação
+		//continuar executando a aplicação
 		new CriaturaDAO().listar();
 
 		new GalaxiaDAO().listar();
