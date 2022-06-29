@@ -1,11 +1,12 @@
-<h1>Git e GITHUB <h1>
+### Git e GITHUB
 
 > Status do projeto: Em desenvolvimento
 
-- reposit髍io: pasta que colocamos o nosso c骴igo
+#### reposit贸rio
+	- diret贸rio onde ficar茫o reunidos todos os arquivos do projeto e poder谩 ser acessado por todas as pessoas da equipe.
 	- repo.new
 	- Readme.md - passo a passo para trabalhar nesse projeto
 	```
-	c骴igo
+	c贸digo
 	```
-	- commit: r髏ulo das altera珲es que realizei
+	- commit: r贸tulo das altera莽玫es que realizei
