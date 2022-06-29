@@ -15,3 +15,9 @@ node app.js
 - rótulo das alterações que realizei
 - marco ao longo do cronograma de um projeto
 - guarda o status do seu projeto naquele momento
+
+#### VSCode
+- apertar a tecla ponto e esperar carregar
+- atalhos
+	-  ! inclui template
+	-  comita as alterações
