@@ -6,7 +6,9 @@
 	- diretório onde ficarão reunidos todos os arquivos do projeto e poderá ser acessado por todas as pessoas da equipe.
 	- repo.new
 	- Readme.md - passo a passo para trabalhar nesse projeto
+	
 	```
-	código
+	node app.js
 	```
+	
 	- commit: rótulo das alterações que realizei
