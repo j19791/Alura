@@ -15,10 +15,12 @@ public class FinalizarLeilaoService {
 
 	
 	private LeilaoDao leiloes;//mockar
+	private EnviadorDeEmails enviadorDeEmails;
 
 	@Autowired //a dependencia devera ser passada no contrutor para que seja possível programar o teste unitário com mockito
-	public FinalizarLeilaoService(LeilaoDao leiloes) {
+	public FinalizarLeilaoService(LeilaoDao leiloes, EnviadorDeEmails enviadorDeEmails) {
 		this.leiloes = leiloes;
+		this.enviadorDeEmails = enviadorDeEmails;
 	}
 
 	public void finalizarLeiloesExpirados() {//leilao expirado é aquele q foi aberto há mais de 7 dias
@@ -27,7 +29,8 @@ public class FinalizarLeilaoService {
 			Lance maiorLance = maiorLanceDadoNoLeilao(leilao);
 			leilao.setLanceVencedor(maiorLance);
 			leilao.fechar(); //fechado=true
-			leiloes.salvar(leilao);
+			leiloes.salvar(leilao); //qdo der erro no salvar leilão, não enviar email
+			enviadorDeEmails.enviarEmailVencedorLeilao(maiorLance);
 		});
 	}
 
