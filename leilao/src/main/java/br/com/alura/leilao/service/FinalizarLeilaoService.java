@@ -12,8 +12,13 @@ import br.com.alura.leilao.model.Leilao;
 @Service
 public class FinalizarLeilaoService {
 
-	@Autowired
+	
 	private LeilaoDao leiloes;//mockar
+
+	@Autowired //a dependencia devera ser passada no contrutor para que seja possível programar o teste unitário com mockito
+	public FinalizarLeilaoService(LeilaoDao leiloes) {
+		this.leiloes = leiloes;
+	}
 
 	public void finalizarLeiloesExpirados() {//leilao expirado é aquele q foi aberto há mais de 7 dias
 		List<Leilao> expirados = leiloes.buscarLeiloesExpirados();
