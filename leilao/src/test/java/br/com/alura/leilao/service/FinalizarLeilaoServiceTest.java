@@ -88,5 +88,24 @@ class FinalizarLeilaoServiceTest {
         return lista;
 
     }
+    
+    @Test
+	void naoDeveriaEnviarEmailQuandoOcorreErroAoFinalizarUmLeilao() {
+		List<Leilao> leiloes = leiloes();
+		
+		Mockito.when(dao.buscarLeiloesExpirados()).thenReturn(leiloes);
+		
+		//simular o lançamento de uma exception ao chamar o método salvar
+		Mockito.when(dao.salvar(Mockito.any())).thenThrow(RuntimeException.class);
+		
+		try {
+			service.finalizarLeiloesExpirados(); 					
+			Mockito.verifyNoInteractions(enviadorDeEmails);	
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+				
+		
+	}
 
 }
