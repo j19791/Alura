@@ -13,14 +13,14 @@ import br.com.alura.leilao.model.Leilao;
 public class FinalizarLeilaoService {
 
 	@Autowired
-	private LeilaoDao leiloes;
+	private LeilaoDao leiloes;//mockar
 
-	public void finalizarLeiloesExpirados() {
+	public void finalizarLeiloesExpirados() {//leilao expirado é aquele q foi aberto há mais de 7 dias
 		List<Leilao> expirados = leiloes.buscarLeiloesExpirados();
 		expirados.forEach(leilao -> {
 			Lance maiorLance = maiorLanceDadoNoLeilao(leilao);
 			leilao.setLanceVencedor(maiorLance);
-			leilao.fechar();
+			leilao.fechar(); //fechado=true
 			leiloes.salvar(leilao);
 		});
 	}
