@@ -1,10 +1,14 @@
 package br.com.alura.leilao.service;
 
 import java.math.BigDecimal;
+import java.time.Clock;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -18,7 +22,6 @@ import br.com.alura.leilao.model.Lance;
 import br.com.alura.leilao.model.Leilao;
 import br.com.alura.leilao.model.Pagamento;
 import br.com.alura.leilao.model.Usuario;
-import org.junit.Assert;
 
 class GeradorDePagamentoTest {
 
@@ -28,10 +31,13 @@ class GeradorDePagamentoTest {
 	@Mock
 	private PagamentoDao pagamentoDao;
 	
+	@Mock
+	private Clock clock;
+	
 	@BeforeEach
 	public void beforeEach() {
 		MockitoAnnotations.initMocks(this);
-		this.gerador = new GeradorDePagamento(pagamentoDao); 
+		this.gerador = new GeradorDePagamento(pagamentoDao, clock); 
 	}
 	
 	@Captor
@@ -40,6 +46,16 @@ class GeradorDePagamentoTest {
 	@Test
 	void deveriaCriarPagamentoParaVencedorDoLeilao() {
 		Leilao leilao = leiloes().get(0);
+		
+		
+		
+		
+		LocalDate data = LocalDate.of(2020, 12, 7);
+		
+		Mockito.when(clock.instant()).thenReturn(data.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Mockito.when(clock.getZone()).thenReturn(ZoneId.systemDefault());
+		
+		
 		gerador.gerarPagamento(leilao.getLanceVencedor());
 		
 		//como recuparar um objeto que esta sendo gerado dentro da classe de testes?
