@@ -1,0 +1,134 @@
+# raiz
+openapi: 3.0.1
+info: #objeto
+  title: API de consultório
+  description: API para controlar médicos e suas especialidades dentro do consultório
+  version: 0.0.1
+  termsOfService: https://mockapi.io
+  contact: 
+    name: Suporte a Devs
+    email: contato@exemplo.com
+    url: https://mockapi.io
+  license:
+    name: "Licença: GPLv3" # colocar entre aspas para usar os : 
+    url: https://www.gnu.org/licenses/gpl-3.0.html
+externalDocs:  #documentação externa
+  description: Documentação burocrática
+  url: https://mockapi.io
+servers: # servidor da api
+- url: https://6096015d116f3f00174b29ba.mockapi.io
+  description: API de Teste
+paths: # mapeando os endpoints (array)
+  /especialidades: # endpoint
+    get: # definir operação usando um verbo (método) HTTP
+      summary: Recupera todas as especialidades
+      responses: # obrigatório defini-la
+        200: #s tatus
+          description:  Sucesso
+          content: #o que vai ser devolvido
+            application/json:
+              schema: #para o swagger montar um exemplo
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    descricao:
+                      type: string
+    post:
+      summary: Cria nova especialidade
+      description: "Através desse endpoint vc pode criar novas especialidades "
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                descricao:
+                  type: string
+      responses:
+        201:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  descricao:
+                    type: string
+  /especialidades/{id}:
+    parameters: #passando parametros para um endpoint especifico
+      - name: id
+        in: path
+        schema:
+          type: integer
+        required: true
+    get:
+      summary: Recupera uma entidade pelo ID
+      responses:
+        200: #status
+          description:  Sucesso
+          content: #o que vai ser devolvido
+            application/json:
+              schema: #para o swagger montar um exemplo
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  descricao:
+                    type: string
+        400: # not found
+          description:  Especialidade não encontrada
+          content: #o que vai ser devolvido
+            application/json:
+              example: "Not found"
+    delete:
+      summary: remove uma entidade pelo ID
+      responses:
+        200: #status
+          description:  entidade removida
+          content: #o que vai ser devolvido
+            application/json:
+              schema: #para o swagger montar um exemplo
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  descricao:
+                    type: string
+        400: # not found
+          description:  Especialidade não encontrada
+          content: #o que vai ser devolvido
+            application/json:
+              example: "Not found"
+    put:
+      summary: Atualiza especialidade
+      description: "Através desse endpoint vc pode atualizar especialidades ja criadas anteriormente "
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                descricao:
+                  type: string
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  descricao:
+                    type: string
+        400: # not found
+          description:  Especialidade não encontrada
+          content: #o que vai ser devolvido
+            application/json:
+              example: "Not found"
