@@ -28,14 +28,16 @@ paths: # mapeando os endpoints (array)
           content: #o que vai ser devolvido
             application/json:
               schema: #para o swagger montar um exemplo
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    descricao:
-                      type: string
+                 $ref: "#/components/schemas/Especialidades" 
+                # type: array
+                # items: # utilizar componente Especialidade aqui
+                #    $ref: "#/components/schemas/Especialidade"
+                  # type: object
+                  # properties:
+                  #  id:
+                  #    type: integer
+                  #  descricao:
+                  #    type: string
     post:
       summary: Cria nova especialidade
       description: "Através desse endpoint vc pode criar novas especialidades "
@@ -53,12 +55,13 @@ paths: # mapeando os endpoints (array)
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                  descricao:
-                    type: string
+                $ref: "#/components/schemas/Especialidade" 
+                # type: object
+                # properties:
+                #  id:
+                #    type: integer
+                #  descricao:
+                #    type: string
   /especialidades/{id}:
     parameters: #passando parametros para um endpoint especifico
       - name: id
@@ -74,12 +77,13 @@ paths: # mapeando os endpoints (array)
           content: #o que vai ser devolvido
             application/json:
               schema: #para o swagger montar um exemplo
-                type: object
-                properties:
-                  id:
-                    type: integer
-                  descricao:
-                    type: string
+                 $ref: "#/components/schemas/Especialidade" 
+                # type: object
+                # properties:
+                #  id:
+                #    type: integer
+                #  descricao:
+                #    type: string
         400: # not found
           description:  Especialidade não encontrada
           content: #o que vai ser devolvido
@@ -132,3 +136,23 @@ paths: # mapeando os endpoints (array)
           content: #o que vai ser devolvido
             application/json:
               example: "Not found"
+security:
+  - auth: [] # autenticação via http. pode ser por operação
+components: # conjunto de objetos para serem reutilizados (schemas, responses, requestBody)
+  schemas:
+    Especialidade:
+      type: object
+      properties:
+        id: 
+          type: integer
+        descricao:
+          type: string
+    Especialidades:
+      type: array
+      items: 
+        $ref: "#/components/schemas/Especialidade" 
+  securitySchemes:
+    auth: # autorização
+      type: http # cabeçalho autorization
+      scheme: bearer # portador (login)
+      bearerFormat: JWT # para quem esta consumindo a documentação
