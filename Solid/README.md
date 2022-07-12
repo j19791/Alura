@@ -1,6 +1,7 @@
 ### Solid
 
 - S: Single responsibility
+	- uma classe deve ter um e apenas um motivo para ser alterada
 - Principios de OO
 - para modelar as classes da aplicação
 

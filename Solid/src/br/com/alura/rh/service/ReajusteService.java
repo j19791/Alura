@@ -1,23 +1,27 @@
 package br.com.alura.rh.service;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
+import java.util.List;
 
-import br.com.alura.rh.ValidacaoException;
 import br.com.alura.rh.model.Funcionario;
 
 //classe extraida de um método da classe Funcionario através da refatoração para melhoria da coesão: Single Responsability
-public class ReajusteService {
+public class ReajusteService {//classe extensível. Não preciso alterar outras validações qdo é alterada apenas uma das alterações
 
+	private List<ValidacaoReajuste> validacoes;
+	
+	
+	public ReajusteService(List<ValidacaoReajuste> validacoes) {
+		this.validacoes = validacoes;
+	}
 	public void reajustarSalarioDoFuncionario(Funcionario funcionario, BigDecimal aumento) {
-		BigDecimal salario = funcionario.getSalario();
-		BigDecimal percentualReajuste = aumento.divide(salario , RoundingMode.HALF_UP);
-		if (percentualReajuste.compareTo(new BigDecimal("0.4")) > 0) {
-			throw new ValidacaoException("Reajuste nao pode ser superior a 40% do salario!");
-		}
+		//para cada validação, a classe vai aumentando. Separar cada regra em uma nova classe
 
-		BigDecimal salarioReajustado = salario.add(aumento);
+		this.validacoes.forEach(v -> v.validar(funcionario, aumento));//executa cada uma das validações
+				
+		BigDecimal salarioReajustado = funcionario.getSalario().add(aumento);
 		funcionario.atualizarSalario(salarioReajustado);
 	}
+	
+	
 }
