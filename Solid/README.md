@@ -2,6 +2,11 @@
 
 - S: Single responsibility
 	- uma classe deve ter um e apenas um motivo para ser alterada
+- O: Open Closed
+	- não precisa alterar um método para realizar coisas específicas. Alterar apenas a coisa específica em uma classe específica.
+	- código mais flexível - extensível
+	- procurar não alterar mas sim adicionar.
+	- usar polimorfismo com interfaces 
 - Principios de OO
 - para modelar as classes da aplicação
 
