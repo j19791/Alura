@@ -1,11 +1,13 @@
 ### Solid
 
+- S: Single responsibility
 - Principios de OO
 - para modelar as classes da aplicação
 
 #### Coesão 
 - harmonia entre atributos e métodos dentro de uma classe
 - Cada classe deve ser responsável por apenas uma coisa, e deve executar esta tarefa muito bem. Concisa
+- Single Responsibility: aumenta coesão. Enxuta
 
 #### Encapsulamento
 - blindar uma classe contra influências / manipulações externas das informações

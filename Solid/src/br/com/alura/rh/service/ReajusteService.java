@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import br.com.alura.rh.ValidacaoException;
 import br.com.alura.rh.model.Funcionario;
 
+//classe extraida de um método da classe Funcionario através da refatoração para melhoria da coesão: Single Responsability
 public class ReajusteService {
 
 	public void reajustarSalarioDoFuncionario(Funcionario funcionario, BigDecimal aumento) {
