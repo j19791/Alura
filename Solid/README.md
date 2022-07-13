@@ -7,6 +7,9 @@
 	- código mais flexível - extensível
 	- procurar não alterar mas sim adicionar.
 	- usar polimorfismo com interfaces 
+- L: Liskov Substitution
+	- um pato de borracha não é um pato de verdade: não usar herança. Usar composição
+	- efeitos colaterias
 - Principios de OO
 - para modelar as classes da aplicação
 

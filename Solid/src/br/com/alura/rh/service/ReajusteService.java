@@ -19,7 +19,7 @@ public class ReajusteService {//classe extensível. Não preciso alterar outras va
 
 		this.validacoes.forEach(v -> v.validar(funcionario, aumento));//executa cada uma das validações
 				
-		BigDecimal salarioReajustado = funcionario.getSalario().add(aumento);
+		BigDecimal salarioReajustado = funcionario.getDadosPessoais().getSalario().add(aumento);
 		funcionario.atualizarSalario(salarioReajustado);
 	}
 	
