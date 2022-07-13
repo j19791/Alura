@@ -8,10 +8,10 @@ import br.com.alura.rh.model.Funcionario;
 //classe extraida de um método da classe Funcionario através da refatoração para melhoria da coesão: Single Responsability
 public class ReajusteService {//classe extensível. Não preciso alterar outras validações qdo é alterada apenas uma das alterações
 
-	private List<ValidacaoReajuste> validacoes;
+	private List<ValidacaoReajuste> validacoes;//Dependency Inversion Principle
 	
 	
-	public ReajusteService(List<ValidacaoReajuste> validacoes) {
+	public ReajusteService(List<ValidacaoReajuste> validacoes) { 
 		this.validacoes = validacoes;
 	}
 	public void reajustarSalarioDoFuncionario(Funcionario funcionario, BigDecimal aumento) {

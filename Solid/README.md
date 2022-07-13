@@ -10,6 +10,12 @@
 - L: Liskov Substitution
 	- um pato de borracha não é um pato de verdade: não usar herança. Usar composição
 	- efeitos colaterias
+- I: Interface Segregation
+	- uma classe que implementa uma interface não deveria ser forçada a depender (implementar) métodos que não utilizará 
+- D: Dependency Inversion Principle
+	- implementações (ReajusteService, PromocaoService, ValidacaoPercentualReajuste) dependem das abstrações (ValidacaoReajuste)
+	- interfaces mudam pouco
+	- classes são mais instáveis	
 - Principios de OO
 - para modelar as classes da aplicação
 
