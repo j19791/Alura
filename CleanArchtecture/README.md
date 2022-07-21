@@ -7,3 +7,13 @@
 
 #### Factories
 
+#### Camadas: de fora p/ dentro
+- domínio
+
+- aplicação
+
+- infra-estrutura
+
+
+
+
