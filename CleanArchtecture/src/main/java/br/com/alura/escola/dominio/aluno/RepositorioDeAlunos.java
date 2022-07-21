@@ -6,7 +6,7 @@ import java.util.List;
 // a implementação vai ser na camada da infra (jdbc/jpa/etc)
 //camada de domínio isolada da infra
 //inversão de dependencia
-public interface RepositórioDeAlunos {
+public interface RepositorioDeAlunos {
 
 	//no domínio não é salvar aluno: é matricular
 	void matricular(Aluno aluno); //salva no bd

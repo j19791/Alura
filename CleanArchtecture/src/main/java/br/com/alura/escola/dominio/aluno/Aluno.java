@@ -11,6 +11,22 @@ public class Aluno {
 	private Email email; //usar regras de validação
 	private List<Telefone> telefones = new ArrayList<>();
 	
+	public String getCpf() {
+		return cpf.getNumero();
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getEmail() {
+		return email.getEndereco();
+	}
+
+	public List<Telefone> getTelefones() {
+		return telefones;
+	}
+
 	public void adicionarTelefone(String ddd, String numero) {
 		this.telefones.add(new Telefone(ddd, numero));
 	}
