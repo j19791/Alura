@@ -1,4 +1,4 @@
-package br.com.alura.escola.aluno;
+package br.com.alura.escola.dominio.aluno;
 
 //Value object - não é Entidade: não tem diferenciação - 2 emails c/ mesmo endereço: é o mesmo endereço
 public class Email {

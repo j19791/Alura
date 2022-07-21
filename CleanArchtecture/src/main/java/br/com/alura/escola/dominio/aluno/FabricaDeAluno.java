@@ -1,4 +1,4 @@
-package br.com.alura.escola.aluno;
+package br.com.alura.escola.dominio.aluno;
 
 //usando o padrão de projeto Builder: montando um objeto
 public class FabricaDeAluno {
