@@ -9,6 +9,7 @@
 
 #### Camadas: de fora p/ dentro
 - domínio
+	- Padrão Repositorio: interface para persistência. Independente da infra 
 
 - aplicação
 
