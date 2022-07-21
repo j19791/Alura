@@ -1,4 +1,4 @@
-package escola;
+package br.com.alura.escola.aluno;
 
 //usando o padrão de projeto Builder: montando um objeto
 public class FabricaDeAluno {
@@ -17,6 +17,10 @@ public class FabricaDeAluno {
 	public FabricaDeAluno comTelefone(String ddd, String numero) {
 		this.aluno.adicionarTelefone(ddd, numero);
 		return this;
+	}
+	
+	public Aluno criar() {
+		return this.aluno;
 	}
 	
 }
