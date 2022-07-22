@@ -10,6 +10,7 @@ public class Aluno {
 	private String nome; //não é o id único p/ identificar os alunos
 	private Email email; //usar regras de validação
 	private List<Telefone> telefones = new ArrayList<>();
+	private String senha; //precisa estar protegida -> segurança: infra-estrutura
 	
 	public String getCpf() {
 		return cpf.getNumero();
