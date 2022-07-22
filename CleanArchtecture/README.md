@@ -11,11 +11,16 @@
 - domínio
 	- Padrão Repositorio: interface para persistência. Independente da infra 
 
-- aplicação
+- aplicação: não faz parte do dominio 
+- implementacao na infra
 
 - infra-estrutura
 
-#### Service
+#### Services
+- Domain Services são classes que representam uma ação entre mais de uma entidade.
+- Application Services controlam o fluxo de alguma regra em nossa aplicação.
+- Infrastructure Services são implementações de interfaces presentes nas camadas de domínio ou de aplicação.
+- conceito (Interface) na camada de dominio e implementação na infra
 - Quando precisamos executar alguma ação que não faça parte de nenhuma entidade nem de um VO
 	- criptografia de senhas
 
