@@ -15,6 +15,10 @@
 
 - infra-estrutura
 
+#### Service
+- Quando precisamos executar alguma ação que não faça parte de nenhuma entidade nem de um VO
+	- criptografia de senhas
+
 
 
 
