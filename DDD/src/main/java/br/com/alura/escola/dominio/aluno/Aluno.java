@@ -20,7 +20,13 @@ public class Aluno {
 		this.email = email;
 	}
 
+	//invariante (validação)
+	//nova regra: um aluno pode ter no másimo 2 telefones
+	//desáfio: criar nova Exception. Teste de unidade para esse método
 	public void adicionarTelefone(String ddd, String numero) {
+		if(telefones.size() == 2) {
+			throw new IllegalArgumentException("Número máximo de telefones atingindos");
+		}
 		this.telefones.add(new Telefone(ddd, numero));
 	}
 	

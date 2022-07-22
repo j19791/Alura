@@ -3,6 +3,7 @@
 - domain "driven" design
 - desenvolver sw orientado ao domínio
 - menos foco na tecnologia e mais domínio da aplicação
+- invariante (business invariant): regras de negócio, validação
 
 #### Linguagem Ubíquia
 - desenvolvedores e analistas de negócio: linguagem comum que as duas equipes conseguem se entender
