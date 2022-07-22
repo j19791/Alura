@@ -32,7 +32,7 @@ public class RepositorioDeAlunosComJDBC implements RepositorioDeAlunos {
 			ps.setString(3, aluno.getEmail());
 			ps.execute();
 			
-			sql = "INSERT INTO TELEFONE VALUES(?, ?)";
+			sql = "INSERT INTO TELEFONE VALUES(?, ?)"; //telefone é um vo de Aluno (aggregate root) e o insert de telefone deverá ser junto com o aluno para garantir a consistência 
 			ps = connection.prepareStatement(sql);
 			for (Telefone telefone : aluno.getTelefones()) {
 				ps.setString(1, telefone.getDdd());
