@@ -12,6 +12,7 @@
 	- Padrão Repositorio: interface para persistência. Independente da infra 
 
 - aplicação: não faz parte do dominio 
+- use cases
 - implementacao na infra
 
 - infra-estrutura
@@ -23,6 +24,8 @@
 - conceito (Interface) na camada de dominio e implementação na infra
 - Quando precisamos executar alguma ação que não faça parte de nenhuma entidade nem de um VO
 	- criptografia de senhas
+	
+- Os termos Use Case, Application Service e Command Handler são basicamente sinônimos e servem para fornecer pontos de entrada na sua aplicação, de forma independente dos mecanismos de entrega (Web, CLI, etc).
 
 
 
