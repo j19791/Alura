@@ -24,3 +24,10 @@
 #### Separação em camadas
 - Domínio
 	- quando precisa de uma infra - usar interface
+	
+#### Eventos
+- js: clique do mouse, etc dispara um evento (notificação) para ser realizado um processamento
+- programação orientada a eventos
+- menos acoplamento.
+- ouvinte do evento: reage ao evento
+- publicar o evento:
