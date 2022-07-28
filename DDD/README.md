@@ -32,7 +32,10 @@
 - ouvinte do evento: reage ao evento
 - publicar o evento:
 
-#### Contextos delimitados
-- separar os contextos para simplificar o código
+#### Contextos delimitados (Bounded Contexts)
+- a separação em contextos nos dá mais flexibilidade porém aumenta (e muito) a complexidade
 - menos acoplado
--
+- mapas de contexto
+	- Contexto compartilhado: 
+		- utilizado em mais de um contexto
+		- mais fácil de possibilitar a comunicação mas tira boa parte da flexibilidade

@@ -3,6 +3,7 @@ package br.com.alura.escola.academico.dominio.aluno;
 import java.time.LocalDateTime;
 
 import br.com.alura.escola.academico.dominio.Evento;
+import br.com.alura.escola.shared.dominio.CPF;
 
 //evento: vários processos são disparados quando o evento matricular um aluno
 //1) que aluno foi matriculado ?
