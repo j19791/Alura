@@ -31,3 +31,8 @@
 - menos acoplamento.
 - ouvinte do evento: reage ao evento
 - publicar o evento:
+
+#### Contextos delimitados
+- separar os contextos para simplificar o código
+- menos acoplado
+-
