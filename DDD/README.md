@@ -24,6 +24,8 @@
 #### Separação em camadas
 - Domínio
 	- quando precisa de uma infra - usar interface
+- aplicacao
+	- os casos de uso
 	
 #### Eventos
 - js: clique do mouse, etc dispara um evento (notificação) para ser realizado um processamento

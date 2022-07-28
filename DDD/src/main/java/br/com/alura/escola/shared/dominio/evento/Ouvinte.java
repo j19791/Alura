@@ -1,4 +1,4 @@
-package br.com.alura.escola.academico.dominio;
+package br.com.alura.escola.shared.dominio.evento;
 
 //dispara o processamento de um evento
 public abstract class Ouvinte {
