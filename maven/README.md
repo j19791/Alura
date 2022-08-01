@@ -3,6 +3,9 @@
 - maven.apache.og
 - versão 3.*.*
 - dentro da IDE ja tem um IDE embutido (integrado)
+- mvnrepository.com
+	- repositório central: projeto faz consulta e baixa
+	- pegar a última versão estável
 
 #### Processo de Build
 - pacote p/ deploy (colocar no ar)
@@ -27,6 +30,12 @@
 	- runtime: apenas em tempo de execução
 	- test: apenas na execução dos testes
 		- JUnit
+- mvn procura primeiro cache local : todas as dependências ja baixadas na máquina
+	.m2
+- senão encontrar, procura no repoitório central
+- erro na tag xml (erro de sincronização)
+	- update maven project
+	- apagar as dependencias dentro do .m2
 
 #### Instalação
 - baixar, descompactar o zip e adicionar a pasta bin no PATH
@@ -63,4 +72,15 @@
 	- não troca a estrutura dos diretórios
 - 
 	
+#### Repositórios
+- configurando um respositório não padrão
+
+```xml
+    <repositories>
+        <repository>
+            <id>spring-repo</id>
+            <url>https://repo.spring.io/release</url>
+        </repository>
+    </repositories>
+```
 

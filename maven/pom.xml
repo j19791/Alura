@@ -15,7 +15,23 @@
 			<!-- hamcrest é uma dependencia do junit -->
 		</dependency>
 	
+	<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
+<dependency>
+    <groupId>com.thoughtworks.xstream</groupId>
+    <artifactId>xstream</artifactId>
+    <version>1.4.19</version>
+</dependency>
+		
+	
 	
 	</dependencies>
+	
+	    <repositories>
+        <repository>
+            <id>spring-repo</id>
+            <url>https://repo.spring.io/release</url>
+        </repository>
+    </repositories>
+	
 	
 </project>
