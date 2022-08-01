@@ -5,6 +5,9 @@
 - menos foco na tecnologia e mais domínio da aplicação
 - invariante (business invariant): regras de negócio, validação. Não permitir inconsistência
 - agreggates:
+- sistemas distribuídos (microserviços)
+- camada anticorrupção: sistemas de mensageria
+	- evitar acoplamento entre os diversos sistemas
 
 #### Linguagem Ubíquia
 - desenvolvedores e analistas de negócio: linguagem comum que as duas equipes conseguem se entender
