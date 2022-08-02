@@ -9,7 +9,7 @@
 
 #### Processo de Build
 - pacote p/ deploy (colocar no ar)
-- war
+- por padrão é jar <packaging>
 - Eclipse export/war file
 - tarefas que deverão ser executadas antes de gerar o war
 	- rodar os testes unitários
@@ -17,6 +17,34 @@
 - Apache Ant: automatização do build
 	- build.xml
 	- não gerencia as dependências
+- linha de comando: mvn
+	- dentro do diretório da aplicação
+	- goals: objetivos (pode ser mais de um)
+		- compile 
+			- Compiling n source file to : local onde o class foi gerado 
+		- clean : update project (limpa o dir target)
+		- test: roda os testes automatizados
+		- package : gera o war/jar
+			- gera por padrão no target
+		- install : localmente joga no cache local
+		- deploy: roda todo o passo passo e joga em um repositório remoto: disponibilizado p/ outros 
+		
+```xml
+<build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source><!--versao do java -->
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>loja</finalName><!-- s/versao --> 
+</build>
+
+```
+ 
 
 #### Dependências
 - libs
