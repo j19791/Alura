@@ -25,7 +25,7 @@ public class LoginTest {
 	@BeforeEach
 	public void beforeEach() {
 		this.browser = new ChromeDriver(); //p/ cada navegador tem uma implementação especifica
-		browser.navigate().to(HTTP_LOCALHOST_8080_LOGIN); //abre o navegador e vai para a url especificada
+		this.browser.navigate().to(HTTP_LOCALHOST_8080_LOGIN); //abre o navegador e vai para a url especificada
 	}
 
 	@Test
@@ -65,6 +65,18 @@ public class LoginTest {
 		//teste3
 		Assert.assertThrows(NoSuchElementException.class, () -> browser.findElement(By.id("usuario-logado"))); //id usuario-logado não deverá existir no retorno do form com login invalido. findElement lança uma exception 
 		
+		
+	}
+	
+	@Test
+	public void naoDeveriaAcessarPaginaRestritaSemEstarLogado() {
+		this.browser.navigate().to("http://localhost:8080/leiloes/2"); //vai tentar entrar direto na tela do leilao id 2 sem estar autenticado
+		
+		//teste 1
+		Assert.assertTrue(browser.getCurrentUrl().equals("http://localhost:8080/login")); //precisa redirecidonado para tela de login
+		
+		Assert.assertFalse(browser.getPageSource().contains("Dados do Leilão")); //não deverá conter o texto Dados do Leilão
+				
 		
 	}
 	
