@@ -6,6 +6,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import br.com.alura.leilao.leiloes.LeiloesPage;
+
 //Page Object - Apenas Selenium. Sem JUnit
 public class LoginPage {
 
@@ -42,8 +44,10 @@ public class LoginPage {
 
 
 
-	public void efetuaLogin() {
-		browser.findElement(By.id("login-form")).submit();//submeter o form
+	public LeiloesPage efetuaLogin() {
+		
+		browser.findElement(By.id("login-form")).submit();//submeter o form;
+		return new LeiloesPage(browser); //compartilha o webdriver para que vc continue na mesma página
 		
 	}
 
