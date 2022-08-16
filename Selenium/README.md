@@ -5,4 +5,8 @@
 
 #### drive no navegador
 
+#### Page objects
+- melhorar a legibilidade dos testes
+- padrão para separar os testes automatizados do JUNIT e da api do  Selenium
+- classe que representa uma página
 
