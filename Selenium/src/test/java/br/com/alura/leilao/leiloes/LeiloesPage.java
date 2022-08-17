@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LeiloesPage {
 
 	private static final String HTTP_LOCALHOST_8080_LEILOES_CADASTRO = "http://localhost:8080/leiloes/new";
+	private static final String HTTP_LOCALHOST_8080_LEILOES = "http://localhost:8080/leiloes";
 	private WebDriver browser;
 	
 	
@@ -54,6 +55,14 @@ public class LeiloesPage {
 		
 		
 		return colunaNome.getText().equals(nome) && colunaDataAbertura.getText().equals(hoje) && colunaValorInicial.getText().equals(valor);
+	}
+
+
+
+
+	public boolean isPaginaAtual() {
+		
+		return browser.getCurrentUrl().contentEquals(HTTP_LOCALHOST_8080_LEILOES);
 	}
 
 
