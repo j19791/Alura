@@ -1,5 +1,9 @@
 package br.com.alura.leilao.leiloes;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -37,8 +41,13 @@ public class LeiloesTest {
 		//3. 
 		CadastroLeilaoPage paginaDeCadastro = paginaDeLeiloes.carregarFormulario();
 		
+		String hoje = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		String nome = "Leilao do dia" + hoje;
+		String valor = "500.00";
 		
 		
+		paginaDeCadastro.cadastrarLeilao(nome, valor, hoje);
+		Assert.assertTrue(paginaDeLeiloes.isLeilaoCadastrado(nome, valor, hoje));
 		
 		
 	}
