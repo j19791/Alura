@@ -3,6 +3,8 @@
 - simula usuário navegando (UX)
 - E2E: End to end
 
+#### dependencia do Selenium
+
 #### drive no navegador
 
 #### Page objects - PO
@@ -11,7 +13,7 @@
 - classe que representa uma página
 
 
-#### Boas práticas
+#### Boas práticas (Guidelines)
 - usar Page objects: separar JUnit e Selenium
 - der nome de métodos de testes e de PO orientados ao domínio: 
 	- deveriaEfetuarLoginComDadosValidos()
