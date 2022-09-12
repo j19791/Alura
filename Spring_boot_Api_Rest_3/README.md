@@ -6,6 +6,7 @@
 
 - Mais segurança 
 	- Atualize a versão do Spring Boot da API
+		- bean-validation não vem mais por padrão. Tem que incluir manualmente
 	- Proteja endpoints baseados em perfil de usuário
 - Profiles
 	- Separe configurações em Profiles

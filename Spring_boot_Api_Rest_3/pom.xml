@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.4.RELEASE</version>
+		<version>2.3.1.RELEASE</version><!-- atualizando a versao do spring-boot -->
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.alura</groupId>
@@ -85,6 +85,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- incluido a dependencia no upgrade da versão do spring-boot -->
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
