@@ -10,6 +10,7 @@
 	- Proteja endpoints baseados em perfil de usuário
 - Profiles
 	- Separe configurações em Profiles
+	- perfils/ ambientes
 - Testes automatizados
 	- Escreva testes automatizados de componentes do Spring Boot
 - Deploy
@@ -17,3 +18,14 @@
 - Deploy com Docker e na nuvem
 	- Utilize Docker na API
 	- Realize o deploy da API no Heroku
+	
+
+```
+netstat -ano | findstr :8080
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       5712
+  TCP    [::]:8080              [::]:0                 LISTENING       5712
+
+taskkill /PID 5712 /F
+ÊXITO: o processo com PID 5712 foi finalizado.
+
+```
