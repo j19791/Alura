@@ -80,7 +80,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<dependency>
+		<dependency><!-- ja vem automaticamente c/ initializaer -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
