@@ -19,7 +19,7 @@ import br.com.alura.forum.repository.UsuarioRepository;
 
 @EnableWebSecurity
 @Configuration
-@Profile("prod")// carregar as configurações de segurança apenas em ambiente de produção
+@Profile(value={"prod", "test"}) //carregar  apenas em ambiente de produção, teste automatizado
 
 public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
