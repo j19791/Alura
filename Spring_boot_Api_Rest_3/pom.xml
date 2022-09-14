@@ -69,6 +69,7 @@
 			<version>0.9.1</version>
 		</dependency>
 
+	<!-- automaticamente o spring roda os testes com banco de dados do tipo de memória -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
