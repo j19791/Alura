@@ -21,7 +21,7 @@ class CursoRepositoryTest {
 	@Autowired //injeção de dependencias pelo Spring
 	private CursoRepository repository;
 	
-	
+	@Autowired
 	private TestEntityManager em;
 	
 	@Test
@@ -42,7 +42,7 @@ class CursoRepositoryTest {
 	public void naoDeveriaCarregarUmCursoNaoCadastradoAoBuscarPeloSeuNome() {
 		String nomeCurso = "JPA";
 		Curso curso = repository.findByNome(nomeCurso);
-		Assert.assertNotNull(curso);
+		Assert.assertNull(curso);
 		
 	}
 	
