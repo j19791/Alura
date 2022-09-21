@@ -53,6 +53,11 @@
 		```
 		java -jar -Dspring.profiles.active=prod -DFORUM_DATABASE_URL=jdbc:h2:mem:alura-forum -DFORUM_DATABASE_USERNAME=sa -DFORUM_DATABASE_PASSWORD= -DFORUM_JWT_SECRET=123456 forum.jar
 		```
+		
+	- Deploy tradicional com arquivo war
+		- jogar dentro do servidor de aplicações
+		
+		
 - Deploy com Docker e na nuvem
 	- Utilize Docker na API
 	- Realize o deploy da API no Heroku
