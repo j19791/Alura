@@ -99,6 +99,8 @@
 	</dependencies>
 
 	<build>
+		<!-- especificando nome do jar gerado -->
+		<finalName>forum</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

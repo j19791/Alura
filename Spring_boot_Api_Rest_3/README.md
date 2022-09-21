@@ -27,6 +27,32 @@
 	- rodar jar (não precisa de servidor de aplicação com Spring boot)
 		- dentro da pasta target
 		- `java -jar forum.jar`
+	- Externalizando senhas com variáveis de ambiente
+		- Run as > Run configurations
+			Java application - Vm arguments : determina com vai ser rodado a aplicação 
+				-Dspring.profiles.active=dev
+		- no terminal: subindo como producao
+			java -jar -Dspring.profiles.active=prod  forum.jar
+		-usando variaveis de ambiente
+		- application-prod.properties
+		```
+		# datasource
+		spring.datasource.driverClassName=org.h2.Driver
+		spring.datasource.url=${FORUM_DATABASE_URL}
+		spring.datasource.username=${FORUM_DATABASE_USERNAME}
+		spring.datasource.password=${FORUM_DATABASE_PASSWORD}
+		```
+		- atribuindo valor as variaveis		
+		```
+			export FORUM_DATABASE_URL=jdbc:h2:mem:alura-forum
+			export FORUM_DATABASE_USERNAME=sa
+			export FORUM_DATABASE_PASSWORD=
+			export FORUM_JWT_SECRET=123456
+		```
+		- rodando no terminal passando parametros
+		```
+		java -jar -Dspring.profiles.active=prod -DFORUM_DATABASE_URL=jdbc:h2:mem:alura-forum -DFORUM_DATABASE_USERNAME=sa -DFORUM_DATABASE_PASSWORD= -DFORUM_JWT_SECRET=123456 forum.jar
+		```
 - Deploy com Docker e na nuvem
 	- Utilize Docker na API
 	- Realize o deploy da API no Heroku
