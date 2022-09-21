@@ -15,6 +15,9 @@
 	<name>forum</name>
 	<description>Demo project for Spring Boot</description>
 
+	<!-- padrão ja qdo nao tem especificacao de empacotamento -->
+
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

@@ -14,7 +14,19 @@
 - Testes automatizados
 	- Escreva testes automatizados de componentes do Spring Boot
 - Deploy
+	- empacotamento padrão : jar
 	- Simule o deploy da API localmente
+	- Springboot: servidor dentro da aplicação
+	- pelo Eclipse:
+		run as > maven install
+		runs as > maven build .. goals: clean package 
+	- no terminal
+		- na raiza do projeto> mvn clean package
+	- jar dentro da pasta target na raiz
+		- sufixo da versao  passado no pom
+	- rodar jar (não precisa de servidor de aplicação com Spring boot)
+		- dentro da pasta target
+		- `java -jar forum.jar`
 - Deploy com Docker e na nuvem
 	- Utilize Docker na API
 	- Realize o deploy da API no Heroku
