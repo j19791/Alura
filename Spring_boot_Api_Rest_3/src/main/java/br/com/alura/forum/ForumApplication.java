@@ -14,17 +14,19 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableCaching
 @EnableSwagger2
 public class ForumApplication 
-	extends SpringBootServletInitializer //Deploy tradicional com arquivo war
+	//extends SpringBootServletInitializer //Deploy tradicional com arquivo war
 	{
 
 	public static void main(String[] args) {
 		SpringApplication.run(ForumApplication.class, args);
 	}
 	
+	/*
 	//Deploy tradicional com arquivo war
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return builder.sources(ForumApplication.class);
 	}
+	*/
 
 }
