@@ -1,6 +1,6 @@
 package br.com.alura.mvc.mudi.controller;
 
-import javax.validation.Valid;
+import javax.validation.Valid; //incluir dependencia spring-boot-starter-validation a partir da versao 2.3.1 do spring 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

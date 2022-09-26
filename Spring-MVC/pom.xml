@@ -37,10 +37,18 @@
 		      <scope>runtime</scope>
 		</dependency>
 		
+		<!-- na versao 2.3.1 do Spring, o pacote javax.validation não é mais incluido automaticamente. Incluir dependencia abaixo -->
 		<dependency>
 		      <groupId>org.springframework.boot</groupId>
 		      <artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>		
+
+		<!-- incluindo o Spring security no projeto -->
+		<dependency>
+		      <groupId>org.springframework.boot</groupId>
+		      <artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
