@@ -59,9 +59,10 @@
 		
 		
 - Deploy com Docker e na nuvem
-	- Utilize Docker na API
-	- Realize o deploy da API no Heroku
-	
+	- Gerando imagem Docker da aplicação
+		- criar arquivo Dockerfile
+		- rodando o daemon do docker na linha de comando no modo administrador  `dockerd --experimental` 		
+		docker build -t alura/forum .
 
 ```
 netstat -ano | findstr :8080

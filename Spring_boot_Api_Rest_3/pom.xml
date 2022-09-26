@@ -14,7 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>forum</name>
 	<description>Demo project for Spring Boot</description>
-	<packaging>war</packaging><!-- default é jar -->
+	<!-- <packaging>war</packaging>default é jar -->
 
 	<!-- padrão ja qdo nao tem especificacao de empacotamento -->
 
@@ -98,11 +98,12 @@
 		</dependency>
 		
 		<!-- Deploy tradicional com arquivo war -->
-		<dependency>
+		<!-- scope provided: qdo gerar o build do projeto, nao incluir a lib do tomcat pq ela vai ser provida pelo próprio servidor de aplicações tomcat -->
+<!-- 		<dependency>
     		<groupId>org.springframework.boot</groupId>
     		<artifactId>spring-boot-starter-tomcat</artifactId>
-    		<scope>provided</scope><!-- qdo gerar o build do projeto, nao incluir a lib do tomcat pq ela vai ser provida pelo próprio servidor de aplicações tomcat -->
-		</dependency>
+    		<scope>provided</scope>
+		</dependency> -->
 
 	</dependencies>
 
