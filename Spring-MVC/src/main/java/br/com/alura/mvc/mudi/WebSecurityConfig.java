@@ -20,7 +20,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests() //
 			.anyRequest().authenticated() //para todas as requisições o usuário deverá estar autenticado
 			.and()
-				.httpBasic(); //usando a config mais simples (basic: form do próprio navegador para se logar)
+			.formLogin(form -> form.loginPage("/login")
+				.permitAll()
+			);
 	}
 	
 	
