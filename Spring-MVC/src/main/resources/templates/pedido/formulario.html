@@ -6,8 +6,13 @@
 		<div class="container">
 			<div th:replace="~{base :: titulo('Meus Pedidos')}"></div>
 	
+		<!--  url do formulario: localhost:8080/mudi/pedido/novo 
+			contexto da aplicaçao:mudi
+			th:action="@{/pedido/novo} : thymeleaf inclui o contexto automaticamente
+		-->
+	
 			<div class="card mt-3">
-				<form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="POST">
+				<form th:object="${requisicaoNovoPedido}" class="card-body" th:action="@{/pedido/novo}" method="POST">
 					<div class="form-group">
 						<label for="nomeProduto">Produto</label>
 						<input th:field="*{nomeProduto}" th:errorClass="is-invalid" class="form-control" placeholder="nome do produto"/>

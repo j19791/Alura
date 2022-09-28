@@ -34,7 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.defaultSuccessUrl("/home", true)
 				.permitAll()
 			)
-			.logout(logout -> logout.logoutUrl("/logout"));
+			.logout(logout -> logout.logoutUrl("/logout"))
+			.csrf().disable(); //removendo configuracao de seguranca csrf (cross-site request forgery) para nao ocorrer erros 403
 	}
 	
 	@Override
