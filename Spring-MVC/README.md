@@ -15,3 +15,8 @@
 	- Implementando o Login
 		- incluir dependencia
 		- incluir classe de segurança no projeto
+		
+#### Provedor de autenticação
+
+- Mostrando os pedidos do usuário
+- Associando o usuário ao pedido
