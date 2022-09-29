@@ -31,7 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 			.anyRequest().authenticated() //para todas as requisições o usuário deverá estar autenticado
 			.and()
 			.formLogin(form -> form.loginPage("/login")
-				.defaultSuccessUrl("/home", true)
+				.defaultSuccessUrl("/usuario/pedido", true)
 				.permitAll()
 			)
 			.logout(logout -> logout.logoutUrl("/logout"))

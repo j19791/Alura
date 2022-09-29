@@ -20,3 +20,10 @@
 
 - Mostrando os pedidos do usuário
 - Associando o usuário ao pedido
+
+#### Paginação e cache
+
+- Controlando os usuários
+- Ajustando a navegação
+- Paginação
+- Cache
