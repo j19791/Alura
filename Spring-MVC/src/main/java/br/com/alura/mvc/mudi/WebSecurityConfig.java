@@ -28,13 +28,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	//configuracao de autorizacao
 	protected void configure(HttpSecurity http) throws Exception{
 		http.authorizeRequests() //
-			.anyRequest().authenticated() //para todas as requisições o usuário deverá estar autenticado
+			.antMatchers("/home/**")
+				.permitAll()
+			.anyRequest()			
+			.authenticated() //para todas as requisições o usuário deverá estar autenticado
 			.and()
 			.formLogin(form -> form.loginPage("/login")
 				.defaultSuccessUrl("/usuario/pedido", true)
 				.permitAll()
 			)
-			.logout(logout -> logout.logoutUrl("/logout"))
+			.logout(logout -> { 
+				logout.logoutUrl("/logout")
+					.logoutSuccessUrl("/home"); //no logout, ir para pagina /home
+				})
 			.csrf().disable(); //removendo configuracao de seguranca csrf (cross-site request forgery) para nao ocorrer erros 403
 	}
 	
