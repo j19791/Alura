@@ -27,3 +27,6 @@
 - Ajustando a navegação
 - Paginação
 - Cache
+	- guarda esse conteúdo (dados do bd) por algum tempo em memória p/ evitar consultas no bd
+	- performar
+	
