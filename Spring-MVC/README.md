@@ -29,4 +29,12 @@
 - Cache
 	- guarda esse conteúdo (dados do bd) por algum tempo em memória p/ evitar consultas no bd
 	- performar
-	
+
+#### Construindo uma API REST
+
+- Introdução ao REST
+- integrar aplicações: - mobile X backend java	
+- usa o http entre aplicações: verbo http, código http (sucesso, etc)
+- requisição com verbo http (GET, POST, PUT, etc) para aplicação consultar, incluir, atualizar um bd e devolver uma resposta em formato json (não html) ou código de sucesso, erro, etc
+		 
+- Criando o REST Controlller	
