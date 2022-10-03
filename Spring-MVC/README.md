@@ -37,4 +37,12 @@
 - usa o http entre aplicações: verbo http, código http (sucesso, etc)
 - requisição com verbo http (GET, POST, PUT, etc) para aplicação consultar, incluir, atualizar um bd e devolver uma resposta em formato json (não html) ou código de sucesso, erro, etc
 		 
-- Criando o REST Controlller	
+- Criando o REST Controlller
+
+#### Ajax e Vue.js
+
+- Vue.js (fala-se view)
+	- lib p/ gerar app front end
+	- framwork progressivo: adotável incrementalmente
+	- camada visual: manipulação html
+	
