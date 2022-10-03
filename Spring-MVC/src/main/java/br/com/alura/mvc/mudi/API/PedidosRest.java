@@ -23,7 +23,7 @@ public class PedidosRest {
 	@GetMapping("aguardando")
 	public List<Pedido> getPedidosAguardandoOfertas(){
 		
-		Sort sort = Sort.by("dataDaEntrega").descending();
+		Sort sort = Sort.by("id").descending();
 		PageRequest paginacao = PageRequest.of(0, 1, sort); //paginacao e ordenacao: a partir da pagina 0, 1 itens por pagina, descendente de data de entrega
 		
 		
