@@ -41,6 +41,7 @@ public class Pedido {
 	@OneToMany(cascade = CascadeType.ALL,
 			mappedBy = "pedido",
 			fetch = FetchType.LAZY) //quando eu buscar um pedido, ele não vai automaticamente carregar também no banco as ofertas.
+	@JsonIgnore //entra em loop qdo tenta serializar oferta. Só quero o conteúdo dos pedidos
 	private List<Oferta> ofertas; 
 	
 	
