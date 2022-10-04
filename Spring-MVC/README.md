@@ -46,3 +46,6 @@
 	- framwork progressivo: adotável incrementalmente
 	- camada visual: manipulação html
 	
+#### Validações com Vue.js
+- Recuperando valores com JavaScript
+	
