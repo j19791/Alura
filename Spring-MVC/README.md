@@ -22,7 +22,6 @@
 - Associando o usuário ao pedido
 
 #### Paginação e cache
-
 - Controlando os usuários
 - Ajustando a navegação
 - Paginação
@@ -31,7 +30,6 @@
 	- performar
 
 #### Construindo uma API REST
-
 - Introdução ao REST
 - integrar aplicações: - mobile X backend java	
 - usa o http entre aplicações: verbo http, código http (sucesso, etc)
@@ -40,7 +38,6 @@
 - Criando o REST Controlller
 
 #### Ajax e Vue.js
-
 - Vue.js (fala-se view)
 	- lib p/ gerar app front end
 	- framwork progressivo: adotável incrementalmente
@@ -48,4 +45,9 @@
 	
 #### Validações com Vue.js
 - Recuperando valores com JavaScript
+
+#### Monitoramento com Interceptadores
+- Interceptador de requisições e respostas
+- Medir o tempo de processamento requisição-resposta para melhoria de perfomance
+- páginas mais acessadas
 	
