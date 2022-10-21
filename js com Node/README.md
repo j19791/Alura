@@ -10,3 +10,12 @@
 
 
 #### Guardando valores na memória do computador
+
+
+#### Boas Práticas com variáveis
+
+
+#### Conversão de tipos
+
+
+#### Atribuição e imutabilidade
