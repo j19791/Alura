@@ -44,4 +44,17 @@ node app.js
 	- necessário commitar e realizar o push para o origin p/ q o restore funcione p/ todos
 	- . restaura todos os arquivos . vc pode especificar o restaura de um arquivo específico
 	
+### branch
+- main código principal (s/ erros) - não é a de desenvolvimento
+- outras branchs (de desenvolvimento)
+- git checkout -b desenvolvimento
+	- cria uma branch de desenvolvimento e ja troca para ela
+- git switch main
+	- volta para a branch main
+- git push origin desenvolvimento 
+	- push p/ a branch especifica
+- merge: pega o que esta no desenv e manda para o principal
+	- no main local realizar o merge `git merge desenvolvimento`
+	- `git push origin main` depois fazer o push do merge local para o origin
 	
+
