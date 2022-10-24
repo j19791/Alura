@@ -19,3 +19,15 @@
 
 
 #### Atribuição e imutabilidade
+
+
+#### While
+
+
+#### Break e debugger
+
+
+#### Debugger
+
+
+#### For
