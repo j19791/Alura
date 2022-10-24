@@ -20,6 +20,19 @@
 
 #### Atribuição e imutabilidade
 
+#### Criando listas
+
+
+#### Removendo elementos
+
+
+#### Operadores Lógicos
+
+
+#### ifs encadeados
+
+
+### Operadores Lógicos encadeados
 
 #### While
 
