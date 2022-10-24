@@ -34,3 +34,13 @@
 
 ### Operadores Lógicos encadeados
 
+#### While
+
+
+#### Break e debugger
+
+
+#### Debugger
+
+
+#### For
