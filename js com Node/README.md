@@ -7,6 +7,15 @@
 	- programas que serão interpretados pelo nosso próprio computador
 
 #### Instalando pré-requisitos
+- Powershell
+	- `node -v`
+	- `node` abre o interpretador
+		- `const idade = 26` salva valores dentro de palavras
+		- `2+2` operações matemáticas
+		- `console.log("Meu primeiro programa JS")` mensagem para exibir na tela
+			- retorno `undefined`
+	- Repl : interpretador do Nodejs no Powershell
+- Visual Studio Code
 
 
 #### Guardando valores na memória do computador
@@ -32,7 +41,7 @@
 #### ifs encadeados
 
 
-### Operadores Lógicos encadeados
+#### Operadores Lógicos encadeados
 
 #### While
 
