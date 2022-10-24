@@ -20,6 +20,11 @@
 
 #### Atribuição e imutabilidade
 
+#### Criando listas
+
+
+#### Removendo elementos
+
 
 #### Operadores Lógicos
 
@@ -28,3 +33,4 @@
 
 
 ### Operadores Lógicos encadeados
+
