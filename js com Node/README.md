@@ -19,3 +19,12 @@
 
 
 #### Atribuição e imutabilidade
+
+
+#### Operadores Lógicos
+
+
+#### ifs encadeados
+
+
+### Operadores Lógicos encadeados
