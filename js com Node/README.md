@@ -19,3 +19,9 @@
 
 
 #### Atribuição e imutabilidade
+
+
+#### Criando listas
+
+
+#### Removendo elementos
